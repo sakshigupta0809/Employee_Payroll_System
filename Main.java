@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import  java.util.*;
+
+// -----------------------------Employee class ------------------------------
 abstract class Employee{
 //    ----------------use access specifier ------------
     private String name;
@@ -27,7 +29,7 @@ abstract class Employee{
 
 
 
-//------------------------ inheritence used --------------------
+//------------------------ inheritence used (full Time Employee class) --------------------
 class FullTimeEmployee extends Employee{
     private double monthlySalary;
     public FullTimeEmployee(String name,int id,double monthlySalary){
@@ -41,7 +43,7 @@ class FullTimeEmployee extends Employee{
         return monthlySalary;
     }
 }
-//------------------------
+------------------------ parttimeemployee class inherited from thir supper class Employee-----------------
 class PartTimeSalary extends Employee{
     private int hoursWorked;
     private double hoursRate;
@@ -56,6 +58,9 @@ class PartTimeSalary extends Employee{
     }
 
 }
+
+// --------------------------------Payroll System class---------------------------
+// -------------- perform opration like 1.add employee 2.display employee 3.remove employee 4.claculate salary --------------
 class PayrollSystem{
     private ArrayList<Employee> employeesList;
     public PayrollSystem(){
@@ -82,6 +87,8 @@ class PayrollSystem{
         }
     }
 }
+
+// --------------------------main class where we call other classes objects--------------------
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
